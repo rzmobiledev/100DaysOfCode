@@ -16,11 +16,10 @@ import datetime as dt
 
 df = pd.read_csv("birthdays.csv")
 df_to_list = df.to_dict(orient="records")
-
 # [{'name': 'rizal', 'email': 'rizal.safril@gmail.com', 'year': 1984.0, 'month': 10.0, 'day': 30.0}]
 
 
-def send_email(**kwargs):
+def send_email(**kwargs: dict):
     my_email = "rzmobiledev@gmail.com"
     smtp = "smtp.gmail.com"
     password = "" #fill with gmail password
